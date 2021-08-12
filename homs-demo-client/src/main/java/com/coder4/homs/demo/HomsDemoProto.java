@@ -3,8 +3,8 @@
 
 package com.coder4.homs.demo;
 
-public final class HomsDemoOuterClass {
-  private HomsDemoOuterClass() {}
+public final class HomsDemoProto {
+  private HomsDemoProto() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
@@ -106,15 +106,15 @@ public final class HomsDemoOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.coder4.homs.demo.HomsDemoOuterClass.internal_static_AddRequest_descriptor;
+      return com.coder4.homs.demo.HomsDemoProto.internal_static_AddRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.coder4.homs.demo.HomsDemoOuterClass.internal_static_AddRequest_fieldAccessorTable
+      return com.coder4.homs.demo.HomsDemoProto.internal_static_AddRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.coder4.homs.demo.HomsDemoOuterClass.AddRequest.class, com.coder4.homs.demo.HomsDemoOuterClass.AddRequest.Builder.class);
+              com.coder4.homs.demo.HomsDemoProto.AddRequest.class, com.coder4.homs.demo.HomsDemoProto.AddRequest.Builder.class);
     }
 
     public static final int VAL1_FIELD_NUMBER = 1;
@@ -186,10 +186,10 @@ public final class HomsDemoOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.coder4.homs.demo.HomsDemoOuterClass.AddRequest)) {
+      if (!(obj instanceof com.coder4.homs.demo.HomsDemoProto.AddRequest)) {
         return super.equals(obj);
       }
-      com.coder4.homs.demo.HomsDemoOuterClass.AddRequest other = (com.coder4.homs.demo.HomsDemoOuterClass.AddRequest) obj;
+      com.coder4.homs.demo.HomsDemoProto.AddRequest other = (com.coder4.homs.demo.HomsDemoProto.AddRequest) obj;
 
       if (getVal1()
           != other.getVal1()) return false;
@@ -215,69 +215,69 @@ public final class HomsDemoOuterClass {
       return hash;
     }
 
-    public static com.coder4.homs.demo.HomsDemoOuterClass.AddRequest parseFrom(
+    public static com.coder4.homs.demo.HomsDemoProto.AddRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.coder4.homs.demo.HomsDemoOuterClass.AddRequest parseFrom(
+    public static com.coder4.homs.demo.HomsDemoProto.AddRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.coder4.homs.demo.HomsDemoOuterClass.AddRequest parseFrom(
+    public static com.coder4.homs.demo.HomsDemoProto.AddRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.coder4.homs.demo.HomsDemoOuterClass.AddRequest parseFrom(
+    public static com.coder4.homs.demo.HomsDemoProto.AddRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.coder4.homs.demo.HomsDemoOuterClass.AddRequest parseFrom(byte[] data)
+    public static com.coder4.homs.demo.HomsDemoProto.AddRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.coder4.homs.demo.HomsDemoOuterClass.AddRequest parseFrom(
+    public static com.coder4.homs.demo.HomsDemoProto.AddRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.coder4.homs.demo.HomsDemoOuterClass.AddRequest parseFrom(java.io.InputStream input)
+    public static com.coder4.homs.demo.HomsDemoProto.AddRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.coder4.homs.demo.HomsDemoOuterClass.AddRequest parseFrom(
+    public static com.coder4.homs.demo.HomsDemoProto.AddRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.coder4.homs.demo.HomsDemoOuterClass.AddRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.coder4.homs.demo.HomsDemoProto.AddRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.coder4.homs.demo.HomsDemoOuterClass.AddRequest parseDelimitedFrom(
+    public static com.coder4.homs.demo.HomsDemoProto.AddRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.coder4.homs.demo.HomsDemoOuterClass.AddRequest parseFrom(
+    public static com.coder4.homs.demo.HomsDemoProto.AddRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.coder4.homs.demo.HomsDemoOuterClass.AddRequest parseFrom(
+    public static com.coder4.homs.demo.HomsDemoProto.AddRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -290,7 +290,7 @@ public final class HomsDemoOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.coder4.homs.demo.HomsDemoOuterClass.AddRequest prototype) {
+    public static Builder newBuilder(com.coder4.homs.demo.HomsDemoProto.AddRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -311,21 +311,21 @@ public final class HomsDemoOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:AddRequest)
-        com.coder4.homs.demo.HomsDemoOuterClass.AddRequestOrBuilder {
+        com.coder4.homs.demo.HomsDemoProto.AddRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.coder4.homs.demo.HomsDemoOuterClass.internal_static_AddRequest_descriptor;
+        return com.coder4.homs.demo.HomsDemoProto.internal_static_AddRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.coder4.homs.demo.HomsDemoOuterClass.internal_static_AddRequest_fieldAccessorTable
+        return com.coder4.homs.demo.HomsDemoProto.internal_static_AddRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.coder4.homs.demo.HomsDemoOuterClass.AddRequest.class, com.coder4.homs.demo.HomsDemoOuterClass.AddRequest.Builder.class);
+                com.coder4.homs.demo.HomsDemoProto.AddRequest.class, com.coder4.homs.demo.HomsDemoProto.AddRequest.Builder.class);
       }
 
-      // Construct using com.coder4.homs.demo.HomsDemoOuterClass.AddRequest.newBuilder()
+      // Construct using com.coder4.homs.demo.HomsDemoProto.AddRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -353,17 +353,17 @@ public final class HomsDemoOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.coder4.homs.demo.HomsDemoOuterClass.internal_static_AddRequest_descriptor;
+        return com.coder4.homs.demo.HomsDemoProto.internal_static_AddRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.coder4.homs.demo.HomsDemoOuterClass.AddRequest getDefaultInstanceForType() {
-        return com.coder4.homs.demo.HomsDemoOuterClass.AddRequest.getDefaultInstance();
+      public com.coder4.homs.demo.HomsDemoProto.AddRequest getDefaultInstanceForType() {
+        return com.coder4.homs.demo.HomsDemoProto.AddRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.coder4.homs.demo.HomsDemoOuterClass.AddRequest build() {
-        com.coder4.homs.demo.HomsDemoOuterClass.AddRequest result = buildPartial();
+      public com.coder4.homs.demo.HomsDemoProto.AddRequest build() {
+        com.coder4.homs.demo.HomsDemoProto.AddRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -371,8 +371,8 @@ public final class HomsDemoOuterClass {
       }
 
       @java.lang.Override
-      public com.coder4.homs.demo.HomsDemoOuterClass.AddRequest buildPartial() {
-        com.coder4.homs.demo.HomsDemoOuterClass.AddRequest result = new com.coder4.homs.demo.HomsDemoOuterClass.AddRequest(this);
+      public com.coder4.homs.demo.HomsDemoProto.AddRequest buildPartial() {
+        com.coder4.homs.demo.HomsDemoProto.AddRequest result = new com.coder4.homs.demo.HomsDemoProto.AddRequest(this);
         result.val1_ = val1_;
         result.val2_ = val2_;
         onBuilt();
@@ -413,16 +413,16 @@ public final class HomsDemoOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.coder4.homs.demo.HomsDemoOuterClass.AddRequest) {
-          return mergeFrom((com.coder4.homs.demo.HomsDemoOuterClass.AddRequest)other);
+        if (other instanceof com.coder4.homs.demo.HomsDemoProto.AddRequest) {
+          return mergeFrom((com.coder4.homs.demo.HomsDemoProto.AddRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.coder4.homs.demo.HomsDemoOuterClass.AddRequest other) {
-        if (other == com.coder4.homs.demo.HomsDemoOuterClass.AddRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.coder4.homs.demo.HomsDemoProto.AddRequest other) {
+        if (other == com.coder4.homs.demo.HomsDemoProto.AddRequest.getDefaultInstance()) return this;
         if (other.getVal1() != 0) {
           setVal1(other.getVal1());
         }
@@ -444,11 +444,11 @@ public final class HomsDemoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.coder4.homs.demo.HomsDemoOuterClass.AddRequest parsedMessage = null;
+        com.coder4.homs.demo.HomsDemoProto.AddRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.coder4.homs.demo.HomsDemoOuterClass.AddRequest) e.getUnfinishedMessage();
+          parsedMessage = (com.coder4.homs.demo.HomsDemoProto.AddRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -536,12 +536,12 @@ public final class HomsDemoOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:AddRequest)
-    private static final com.coder4.homs.demo.HomsDemoOuterClass.AddRequest DEFAULT_INSTANCE;
+    private static final com.coder4.homs.demo.HomsDemoProto.AddRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.coder4.homs.demo.HomsDemoOuterClass.AddRequest();
+      DEFAULT_INSTANCE = new com.coder4.homs.demo.HomsDemoProto.AddRequest();
     }
 
-    public static com.coder4.homs.demo.HomsDemoOuterClass.AddRequest getDefaultInstance() {
+    public static com.coder4.homs.demo.HomsDemoProto.AddRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -566,7 +566,7 @@ public final class HomsDemoOuterClass {
     }
 
     @java.lang.Override
-    public com.coder4.homs.demo.HomsDemoOuterClass.AddRequest getDefaultInstanceForType() {
+    public com.coder4.homs.demo.HomsDemoProto.AddRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -653,15 +653,15 @@ public final class HomsDemoOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.coder4.homs.demo.HomsDemoOuterClass.internal_static_AddResponse_descriptor;
+      return com.coder4.homs.demo.HomsDemoProto.internal_static_AddResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.coder4.homs.demo.HomsDemoOuterClass.internal_static_AddResponse_fieldAccessorTable
+      return com.coder4.homs.demo.HomsDemoProto.internal_static_AddResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.coder4.homs.demo.HomsDemoOuterClass.AddResponse.class, com.coder4.homs.demo.HomsDemoOuterClass.AddResponse.Builder.class);
+              com.coder4.homs.demo.HomsDemoProto.AddResponse.class, com.coder4.homs.demo.HomsDemoProto.AddResponse.Builder.class);
     }
 
     public static final int VAL_FIELD_NUMBER = 1;
@@ -715,10 +715,10 @@ public final class HomsDemoOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.coder4.homs.demo.HomsDemoOuterClass.AddResponse)) {
+      if (!(obj instanceof com.coder4.homs.demo.HomsDemoProto.AddResponse)) {
         return super.equals(obj);
       }
-      com.coder4.homs.demo.HomsDemoOuterClass.AddResponse other = (com.coder4.homs.demo.HomsDemoOuterClass.AddResponse) obj;
+      com.coder4.homs.demo.HomsDemoProto.AddResponse other = (com.coder4.homs.demo.HomsDemoProto.AddResponse) obj;
 
       if (getVal()
           != other.getVal()) return false;
@@ -740,69 +740,69 @@ public final class HomsDemoOuterClass {
       return hash;
     }
 
-    public static com.coder4.homs.demo.HomsDemoOuterClass.AddResponse parseFrom(
+    public static com.coder4.homs.demo.HomsDemoProto.AddResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.coder4.homs.demo.HomsDemoOuterClass.AddResponse parseFrom(
+    public static com.coder4.homs.demo.HomsDemoProto.AddResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.coder4.homs.demo.HomsDemoOuterClass.AddResponse parseFrom(
+    public static com.coder4.homs.demo.HomsDemoProto.AddResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.coder4.homs.demo.HomsDemoOuterClass.AddResponse parseFrom(
+    public static com.coder4.homs.demo.HomsDemoProto.AddResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.coder4.homs.demo.HomsDemoOuterClass.AddResponse parseFrom(byte[] data)
+    public static com.coder4.homs.demo.HomsDemoProto.AddResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.coder4.homs.demo.HomsDemoOuterClass.AddResponse parseFrom(
+    public static com.coder4.homs.demo.HomsDemoProto.AddResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.coder4.homs.demo.HomsDemoOuterClass.AddResponse parseFrom(java.io.InputStream input)
+    public static com.coder4.homs.demo.HomsDemoProto.AddResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.coder4.homs.demo.HomsDemoOuterClass.AddResponse parseFrom(
+    public static com.coder4.homs.demo.HomsDemoProto.AddResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.coder4.homs.demo.HomsDemoOuterClass.AddResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.coder4.homs.demo.HomsDemoProto.AddResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.coder4.homs.demo.HomsDemoOuterClass.AddResponse parseDelimitedFrom(
+    public static com.coder4.homs.demo.HomsDemoProto.AddResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.coder4.homs.demo.HomsDemoOuterClass.AddResponse parseFrom(
+    public static com.coder4.homs.demo.HomsDemoProto.AddResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.coder4.homs.demo.HomsDemoOuterClass.AddResponse parseFrom(
+    public static com.coder4.homs.demo.HomsDemoProto.AddResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -815,7 +815,7 @@ public final class HomsDemoOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.coder4.homs.demo.HomsDemoOuterClass.AddResponse prototype) {
+    public static Builder newBuilder(com.coder4.homs.demo.HomsDemoProto.AddResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -836,21 +836,21 @@ public final class HomsDemoOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:AddResponse)
-        com.coder4.homs.demo.HomsDemoOuterClass.AddResponseOrBuilder {
+        com.coder4.homs.demo.HomsDemoProto.AddResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.coder4.homs.demo.HomsDemoOuterClass.internal_static_AddResponse_descriptor;
+        return com.coder4.homs.demo.HomsDemoProto.internal_static_AddResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.coder4.homs.demo.HomsDemoOuterClass.internal_static_AddResponse_fieldAccessorTable
+        return com.coder4.homs.demo.HomsDemoProto.internal_static_AddResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.coder4.homs.demo.HomsDemoOuterClass.AddResponse.class, com.coder4.homs.demo.HomsDemoOuterClass.AddResponse.Builder.class);
+                com.coder4.homs.demo.HomsDemoProto.AddResponse.class, com.coder4.homs.demo.HomsDemoProto.AddResponse.Builder.class);
       }
 
-      // Construct using com.coder4.homs.demo.HomsDemoOuterClass.AddResponse.newBuilder()
+      // Construct using com.coder4.homs.demo.HomsDemoProto.AddResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -876,17 +876,17 @@ public final class HomsDemoOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.coder4.homs.demo.HomsDemoOuterClass.internal_static_AddResponse_descriptor;
+        return com.coder4.homs.demo.HomsDemoProto.internal_static_AddResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.coder4.homs.demo.HomsDemoOuterClass.AddResponse getDefaultInstanceForType() {
-        return com.coder4.homs.demo.HomsDemoOuterClass.AddResponse.getDefaultInstance();
+      public com.coder4.homs.demo.HomsDemoProto.AddResponse getDefaultInstanceForType() {
+        return com.coder4.homs.demo.HomsDemoProto.AddResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.coder4.homs.demo.HomsDemoOuterClass.AddResponse build() {
-        com.coder4.homs.demo.HomsDemoOuterClass.AddResponse result = buildPartial();
+      public com.coder4.homs.demo.HomsDemoProto.AddResponse build() {
+        com.coder4.homs.demo.HomsDemoProto.AddResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -894,8 +894,8 @@ public final class HomsDemoOuterClass {
       }
 
       @java.lang.Override
-      public com.coder4.homs.demo.HomsDemoOuterClass.AddResponse buildPartial() {
-        com.coder4.homs.demo.HomsDemoOuterClass.AddResponse result = new com.coder4.homs.demo.HomsDemoOuterClass.AddResponse(this);
+      public com.coder4.homs.demo.HomsDemoProto.AddResponse buildPartial() {
+        com.coder4.homs.demo.HomsDemoProto.AddResponse result = new com.coder4.homs.demo.HomsDemoProto.AddResponse(this);
         result.val_ = val_;
         onBuilt();
         return result;
@@ -935,16 +935,16 @@ public final class HomsDemoOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.coder4.homs.demo.HomsDemoOuterClass.AddResponse) {
-          return mergeFrom((com.coder4.homs.demo.HomsDemoOuterClass.AddResponse)other);
+        if (other instanceof com.coder4.homs.demo.HomsDemoProto.AddResponse) {
+          return mergeFrom((com.coder4.homs.demo.HomsDemoProto.AddResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.coder4.homs.demo.HomsDemoOuterClass.AddResponse other) {
-        if (other == com.coder4.homs.demo.HomsDemoOuterClass.AddResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.coder4.homs.demo.HomsDemoProto.AddResponse other) {
+        if (other == com.coder4.homs.demo.HomsDemoProto.AddResponse.getDefaultInstance()) return this;
         if (other.getVal() != 0) {
           setVal(other.getVal());
         }
@@ -963,11 +963,11 @@ public final class HomsDemoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.coder4.homs.demo.HomsDemoOuterClass.AddResponse parsedMessage = null;
+        com.coder4.homs.demo.HomsDemoProto.AddResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.coder4.homs.demo.HomsDemoOuterClass.AddResponse) e.getUnfinishedMessage();
+          parsedMessage = (com.coder4.homs.demo.HomsDemoProto.AddResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1024,12 +1024,12 @@ public final class HomsDemoOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:AddResponse)
-    private static final com.coder4.homs.demo.HomsDemoOuterClass.AddResponse DEFAULT_INSTANCE;
+    private static final com.coder4.homs.demo.HomsDemoProto.AddResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.coder4.homs.demo.HomsDemoOuterClass.AddResponse();
+      DEFAULT_INSTANCE = new com.coder4.homs.demo.HomsDemoProto.AddResponse();
     }
 
-    public static com.coder4.homs.demo.HomsDemoOuterClass.AddResponse getDefaultInstance() {
+    public static com.coder4.homs.demo.HomsDemoProto.AddResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1054,7 +1054,495 @@ public final class HomsDemoOuterClass {
     }
 
     @java.lang.Override
-    public com.coder4.homs.demo.HomsDemoOuterClass.AddResponse getDefaultInstanceForType() {
+    public com.coder4.homs.demo.HomsDemoProto.AddResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AddSingleRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:AddSingleRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 val = 1;</code>
+     * @return The val.
+     */
+    int getVal();
+  }
+  /**
+   * Protobuf type {@code AddSingleRequest}
+   */
+  public static final class AddSingleRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:AddSingleRequest)
+      AddSingleRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddSingleRequest.newBuilder() to construct.
+    private AddSingleRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddSingleRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddSingleRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AddSingleRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              val_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coder4.homs.demo.HomsDemoProto.internal_static_AddSingleRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coder4.homs.demo.HomsDemoProto.internal_static_AddSingleRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coder4.homs.demo.HomsDemoProto.AddSingleRequest.class, com.coder4.homs.demo.HomsDemoProto.AddSingleRequest.Builder.class);
+    }
+
+    public static final int VAL_FIELD_NUMBER = 1;
+    private int val_;
+    /**
+     * <code>int32 val = 1;</code>
+     * @return The val.
+     */
+    @java.lang.Override
+    public int getVal() {
+      return val_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (val_ != 0) {
+        output.writeInt32(1, val_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (val_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, val_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coder4.homs.demo.HomsDemoProto.AddSingleRequest)) {
+        return super.equals(obj);
+      }
+      com.coder4.homs.demo.HomsDemoProto.AddSingleRequest other = (com.coder4.homs.demo.HomsDemoProto.AddSingleRequest) obj;
+
+      if (getVal()
+          != other.getVal()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VAL_FIELD_NUMBER;
+      hash = (53 * hash) + getVal();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coder4.homs.demo.HomsDemoProto.AddSingleRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coder4.homs.demo.HomsDemoProto.AddSingleRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coder4.homs.demo.HomsDemoProto.AddSingleRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coder4.homs.demo.HomsDemoProto.AddSingleRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coder4.homs.demo.HomsDemoProto.AddSingleRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coder4.homs.demo.HomsDemoProto.AddSingleRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coder4.homs.demo.HomsDemoProto.AddSingleRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coder4.homs.demo.HomsDemoProto.AddSingleRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coder4.homs.demo.HomsDemoProto.AddSingleRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.coder4.homs.demo.HomsDemoProto.AddSingleRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coder4.homs.demo.HomsDemoProto.AddSingleRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coder4.homs.demo.HomsDemoProto.AddSingleRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coder4.homs.demo.HomsDemoProto.AddSingleRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code AddSingleRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:AddSingleRequest)
+        com.coder4.homs.demo.HomsDemoProto.AddSingleRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coder4.homs.demo.HomsDemoProto.internal_static_AddSingleRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coder4.homs.demo.HomsDemoProto.internal_static_AddSingleRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coder4.homs.demo.HomsDemoProto.AddSingleRequest.class, com.coder4.homs.demo.HomsDemoProto.AddSingleRequest.Builder.class);
+      }
+
+      // Construct using com.coder4.homs.demo.HomsDemoProto.AddSingleRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        val_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coder4.homs.demo.HomsDemoProto.internal_static_AddSingleRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coder4.homs.demo.HomsDemoProto.AddSingleRequest getDefaultInstanceForType() {
+        return com.coder4.homs.demo.HomsDemoProto.AddSingleRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coder4.homs.demo.HomsDemoProto.AddSingleRequest build() {
+        com.coder4.homs.demo.HomsDemoProto.AddSingleRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coder4.homs.demo.HomsDemoProto.AddSingleRequest buildPartial() {
+        com.coder4.homs.demo.HomsDemoProto.AddSingleRequest result = new com.coder4.homs.demo.HomsDemoProto.AddSingleRequest(this);
+        result.val_ = val_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coder4.homs.demo.HomsDemoProto.AddSingleRequest) {
+          return mergeFrom((com.coder4.homs.demo.HomsDemoProto.AddSingleRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coder4.homs.demo.HomsDemoProto.AddSingleRequest other) {
+        if (other == com.coder4.homs.demo.HomsDemoProto.AddSingleRequest.getDefaultInstance()) return this;
+        if (other.getVal() != 0) {
+          setVal(other.getVal());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.coder4.homs.demo.HomsDemoProto.AddSingleRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.coder4.homs.demo.HomsDemoProto.AddSingleRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int val_ ;
+      /**
+       * <code>int32 val = 1;</code>
+       * @return The val.
+       */
+      @java.lang.Override
+      public int getVal() {
+        return val_;
+      }
+      /**
+       * <code>int32 val = 1;</code>
+       * @param value The val to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVal(int value) {
+        
+        val_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 val = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVal() {
+        
+        val_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:AddSingleRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:AddSingleRequest)
+    private static final com.coder4.homs.demo.HomsDemoProto.AddSingleRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coder4.homs.demo.HomsDemoProto.AddSingleRequest();
+    }
+
+    public static com.coder4.homs.demo.HomsDemoProto.AddSingleRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddSingleRequest>
+        PARSER = new com.google.protobuf.AbstractParser<AddSingleRequest>() {
+      @java.lang.Override
+      public AddSingleRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AddSingleRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddSingleRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddSingleRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coder4.homs.demo.HomsDemoProto.AddSingleRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1070,6 +1558,11 @@ public final class HomsDemoOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_AddResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_AddSingleRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_AddSingleRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1081,9 +1574,11 @@ public final class HomsDemoOuterClass {
     java.lang.String[] descriptorData = {
       "\n\016HomsDemo.proto\"(\n\nAddRequest\022\014\n\004val1\030\001" +
       " \001(\005\022\014\n\004val2\030\002 \001(\005\"\032\n\013AddResponse\022\013\n\003val" +
-      "\030\001 \001(\0052,\n\010HomsDemo\022 \n\003Add\022\013.AddRequest\032\014" +
-      ".AddResponseB\026\n\024com.coder4.homs.demob\006pr" +
-      "oto3"
+      "\030\001 \001(\005\"\037\n\020AddSingleRequest\022\013\n\003val\030\001 \001(\0052" +
+      "W\n\010HomsDemo\022 \n\003Add\022\013.AddRequest\032\014.AddRes" +
+      "ponse\022)\n\004Add2\022\021.AddSingleRequest\032\014.AddRe" +
+      "sponse(\001B%\n\024com.coder4.homs.demoB\rHomsDe" +
+      "moProtob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1100,6 +1595,12 @@ public final class HomsDemoOuterClass {
     internal_static_AddResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AddResponse_descriptor,
+        new java.lang.String[] { "Val", });
+    internal_static_AddSingleRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_AddSingleRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_AddSingleRequest_descriptor,
         new java.lang.String[] { "Val", });
   }
 

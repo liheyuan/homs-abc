@@ -1,5 +1,7 @@
 syntax = "proto3";
 option java_package = "com.coder4.homs.demo";
+option java_outer_classname = "HomsDemoProto";
+;
 
 message AddRequest {
     int32 val1 = 1;
@@ -10,6 +12,11 @@ message AddResponse {
     int32 val = 1;
 }
 
+message AddSingleRequest {
+    int32 val = 1;
+}
+
 service HomsDemo {
     rpc Add(AddRequest) returns (AddResponse);
+    rpc Add2(stream AddSingleRequest) returns (AddResponse);
 }

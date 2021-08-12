@@ -1,8 +1,15 @@
 plugins {
     id 'java'
+    id 'io.spring.dependency-management'
 }
 
 dependencies {
-    implementation project(':homs-demo-common')
-    implementation 'com.google.protobuf:protobuf-java:3.17.3'
+    implementation platform('com.coder4:bom-homs:1.0')
+
+    implementation 'com.google.protobuf:protobuf-java'
+    implementation "io.grpc:grpc-stub"
+    implementation "io.grpc:grpc-protobuf"
+    implementation 'io.grpc:grpc-netty-shaded'
+
+    implementation "org.slf4j:slf4j-api"
 }

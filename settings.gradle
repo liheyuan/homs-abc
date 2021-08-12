@@ -1,4 +1,3 @@
 rootProject.name = 'homs-demo'
-include 'homs-demo-common'
 include 'homs-demo-client'
 include 'homs-demo-server'
