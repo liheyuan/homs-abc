@@ -1,0 +1,13 @@
+# server enable graceful shutdown
+server:
+  port: 8080
+  shutdown: graceful
+
+# graceful shutdown max wait time
+spring.lifecycle.timeout-per-shutdown-phase: 20s
+
+# manage port for health / shutdown
+management:
+  server.port: 8081
+  endpoint.shutdown.enabled: true
+  endpoints.web.exposure.include: shutdown

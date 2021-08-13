@@ -6,7 +6,6 @@
  */
 package com.coder4.homs.demo.server;
 
-import com.coder4.homs.demo.server.grpc.HomsDemoGrpcImpl;
 import io.grpc.BindableService;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
@@ -34,48 +33,18 @@ public class HomsRpcServer {
         this.port = port;
     }
 
-    private void start() throws IOException {
+    public void start() throws IOException {
         /* The port on which the server should run */
         server = ServerBuilder.forPort(port)
                 .addService(service)
                 .build()
                 .start();
-        LOG.info("Start gRPC server listening on " + port);
-        Runtime.getRuntime().addShutdownHook(new Thread() {
-            @Override
-            public void run() {
-                // Use stderr here since the logger may have been reset by its JVM shutdown hook.
-                LOG.info("Shutting down gRPC server since JVM is shutting down");
-                try {
-                    HomsRpcServer.this.stop();
-                } catch (InterruptedException e) {
-                    LOG.error("Shutdown gRPC server exception", e);
-                }
-                LOG.error("Shutdown gRPC server done");
-            }
-        });
+        LOG.info("start gRPC server listening on " + port);
     }
 
-    private void stop() throws InterruptedException {
+    public void stop() throws InterruptedException {
         if (server != null) {
-            server.shutdown().awaitTermination(30, TimeUnit.SECONDS);
-        }
-    }
-
-    private void blockUntilShutdown() throws InterruptedException {
-        if (server != null) {
-            server.awaitTermination();
-        }
-    }
-
-    // Test For Main
-    public static void main(String[] args) {
-        try {
-            final HomsRpcServer server = new HomsRpcServer(new HomsDemoGrpcImpl(), 5000);
-            server.start();
-            server.blockUntilShutdown();
-        } catch (Exception e) {
-            e.printStackTrace();
+            server.shutdown().awaitTermination(15, TimeUnit.SECONDS);
         }
     }
 }
