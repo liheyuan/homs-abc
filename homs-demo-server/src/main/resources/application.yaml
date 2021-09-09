@@ -11,3 +11,19 @@ management:
   server.port: 8081
   endpoint.shutdown.enabled: true
   endpoints.web.exposure.include: shutdown
+
+# jdbc demo
+spring.datasource:
+  url: jdbc:mysql://127.0.0.1:3306/homs_demo?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+  username: HomsDemo
+  password: 123456
+  hikari:
+    # more see https://github.com/brettwooldridge/HikariCP#gear-configuration-knobs-baby
+    minimumIdle: 10
+    maximumPoolSize: 100
+
+# mybatis demo
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.coder4.homs.demo.server.mybatis.dataobject
