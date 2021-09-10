@@ -22,7 +22,7 @@ import java.util.Optional;
 @Repository
 public interface UserJPARepository extends CrudRepository<UserEntity, Long> {
 
-    @Query("SELECT u FROM UserEntity u WHERE u.id = :id")
+    @Query(value = "SELECT * FROM users WHERE id = :id", nativeQuery = true)
     Optional<UserEntity> findByIdFast(@Param("id") long id);
 
     Collection<UserEntity> findByName(String name);
