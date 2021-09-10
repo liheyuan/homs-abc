@@ -37,8 +37,43 @@ public class UserLogicImpl implements UserLogic {
     }
 
     @Override
+    public UserVO getUserByName(String name) {
+        return userService.getUserByName(name).map(User::toUserVO)
+                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND));
+    }
+
+    @Override
     public long createUserV2(UserVO user) {
         return userService.createV2(user.toUser()).orElse(-1L);
+    }
+
+    @Override
+    public UserVO getUserByIdV2(long id) {
+        return userService.getUserByIdV2(id).map(User::toUserVO)
+                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND));
+    }
+
+    @Override
+    public UserVO getUserByNameV2(String name) {
+        return userService.getUserByNameV2(name).map(User::toUserVO)
+                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND));
+    }
+
+    @Override
+    public long createUserV3(UserVO user) {
+        return userService.createV3(user.toUser()).orElse(-1L);
+    }
+
+    @Override
+    public UserVO getUserByIdV3(long id) {
+        return userService.getUserByIdV3(id).map(User::toUserVO)
+                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND));
+    }
+
+    @Override
+    public UserVO getUserByNameV3(String name) {
+        return userService.getUserByNameV3(name).map(User::toUserVO)
+                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND));
     }
 
 }

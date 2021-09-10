@@ -15,7 +15,7 @@ import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
-import com.coder4.homs.demo.server.repository.spi.UserRepository1;
+import com.coder4.homs.demo.server.repository.spi.UserRepository;
 
 import java.util.Optional;
 
@@ -23,7 +23,7 @@ import java.util.Optional;
  * @author coder4
  */
 @Repository
-public class UserRepository1Impl extends BaseRepository implements UserRepository1 {
+public class UserRepository1Impl extends BaseRepository implements UserRepository {
 
     private static RowMapper<User> ROW_MAPPER = new BeanPropertyRowMapper<>(User.class);
 
@@ -41,8 +41,19 @@ public class UserRepository1Impl extends BaseRepository implements UserRepositor
 
     @Override
     public Optional<User> getUser(long id) {
-        String sql = "SELECT * FROM `user` WHERE `id` = :id";
+        String sql = "SELECT * FROM `users` WHERE `id` = :id";
         SqlParameterSource param = new MapSqlParameterSource("id", id);
+        try {
+            return Optional.ofNullable(db.queryForObject(sql, param, ROW_MAPPER));
+        } catch (EmptyResultDataAccessException e) {
+            return Optional.empty();
+        }
+    }
+
+    @Override
+    public Optional<User> getUserByName(String name) {
+        String sql = "SELECT * FROM `users` WHERE `name` = :name";
+        SqlParameterSource param = new MapSqlParameterSource("name", name);
         try {
             return Optional.ofNullable(db.queryForObject(sql, param, ROW_MAPPER));
         } catch (EmptyResultDataAccessException e) {

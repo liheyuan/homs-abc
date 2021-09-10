@@ -27,3 +27,11 @@ mybatis:
   config-location: classpath:mybatis-config.xml
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.coder4.homs.demo.server.mybatis.dataobject
+
+# jpa demo
+spring.jpa:
+  database-platform: org.hibernate.dialect.MySQL8Dialect
+  hibernate.ddl-auto: update
+  #properties.hibernate:
+    #show_sql: true
+    #generate_statistics: true

@@ -17,5 +17,17 @@ public interface UserLogic {
 
     UserVO getUserById(long id);
 
+    UserVO getUserByName(String name);
+
     long createUserV2(UserVO user);
+
+    UserVO getUserByIdV2(long id);
+
+    UserVO getUserByNameV2(String name);
+
+    long createUserV3(UserVO user);
+
+    UserVO getUserByIdV3(long id);
+
+    UserVO getUserByNameV3(String name);
 }

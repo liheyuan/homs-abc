@@ -36,9 +36,39 @@ public class UserController {
         return userLogic.getUserById(id);
     }
 
+    @GetMapping(value = "/name/{name}")
+    public UserVO getByName(@PathVariable String name) {
+        return userLogic.getUserByName(name);
+    }
+
     @PostMapping(value = "/v2")
     public long createUserV2(@RequestBody UserVO user) {
         return userLogic.createUserV2(user);
+    }
+
+    @GetMapping(value = "/v2/{id}")
+    public UserVO getByIdV2(@PathVariable long id) {
+        return userLogic.getUserByIdV2(id);
+    }
+
+    @GetMapping(value = "/name/v2/{name}")
+    public UserVO getByNameV2(@PathVariable String name) {
+        return userLogic.getUserByNameV2(name);
+    }
+
+    @PostMapping(value = "/v3")
+    public long createUserV3(@RequestBody UserVO user) {
+        return userLogic.createUserV3(user);
+    }
+
+    @GetMapping(value = "/v3/{id}")
+    public UserVO getByIdV3(@PathVariable long id) {
+        return userLogic.getUserByIdV3(id);
+    }
+
+    @GetMapping(value = "/name/v3/{name}")
+    public UserVO getByNameV3(@PathVariable String name) {
+        return userLogic.getUserByNameV3(name);
     }
 
 }

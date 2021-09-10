@@ -13,9 +13,11 @@ import java.util.Optional;
 /**
  * @author coder4
  */
-public interface UserRepository1 {
+public interface UserRepository {
 
     Optional<Long> create(User user);
 
     Optional<User> getUser(long id);
+
+    Optional<User> getUserByName(String name);
 }

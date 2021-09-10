@@ -2,6 +2,7 @@ package com.coder4.homs.demo.server.mybatis.mapper;
 
 import com.coder4.homs.demo.server.mybatis.dataobject.UserDO;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -16,6 +17,10 @@ import org.springframework.stereotype.Repository;
 @Mapper
 public interface UserMapper {
 
-    long insert(UserDO user);
+    long create(UserDO user);
+
+    UserDO getUser(@Param("id") Long id);
+
+    UserDO getUserByName(@Param("name") String name);
 
 }

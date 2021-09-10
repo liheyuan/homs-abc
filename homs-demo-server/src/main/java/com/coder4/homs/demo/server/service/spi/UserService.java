@@ -16,9 +16,21 @@ import java.util.Optional;
  */
 public interface UserService {
 
-    Optional<Long> create(User toUser);
+    Optional<Long> create(User user);
 
     Optional<User> getUserById(long id);
 
-    Optional<Long> createV2(User toUser);
+    Optional<User> getUserByName(String name);
+
+    Optional<Long> createV2(User user);
+
+    Optional<User> getUserByIdV2(long id);
+
+    Optional<User> getUserByNameV2(String name);
+
+    Optional<Long> createV3(User user);
+
+    Optional<User> getUserByIdV3(long id);
+
+    Optional<User> getUserByNameV3(String name);
 }

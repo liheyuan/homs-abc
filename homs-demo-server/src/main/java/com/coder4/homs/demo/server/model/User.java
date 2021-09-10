@@ -6,6 +6,7 @@
  */
 package com.coder4.homs.demo.server.model;
 
+import com.coder4.homs.demo.server.jpa.entity.UserEntity;
 import com.coder4.homs.demo.server.mybatis.dataobject.UserDO;
 import com.coder4.homs.demo.server.web.vo.UserVO;
 import lombok.Data;
@@ -29,6 +30,13 @@ public class User {
 
     public UserDO toUserDO() {
         UserDO user = new UserDO();
+        user.setId(id);
+        user.setName(name);
+        return user;
+    }
+
+    public UserEntity toUserEntity() {
+        UserEntity user = new UserEntity();
         user.setId(id);
         user.setName(name);
         return user;
