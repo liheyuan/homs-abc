@@ -1,8 +1,11 @@
 package com.coder4.homs.demo.server.mybatis.mapper;
 
 import com.coder4.homs.demo.server.mybatis.dataobject.UserDO;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -17,10 +20,14 @@ import org.springframework.stereotype.Repository;
 @Mapper
 public interface UserMapper {
 
+    @Insert("INSERT INTO users(name) VALUES(#{name})")
+    @Options(useGeneratedKeys = true, keyProperty = "id")
     long create(UserDO user);
 
+    @Select("SELECT * FROM users WHERE id = #{id}")
     UserDO getUser(@Param("id") Long id);
 
+    @Select("SELECT * FROM users WHERE name = #{name}")
     UserDO getUserByName(@Param("name") String name);
 
 }
