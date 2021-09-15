@@ -11,11 +11,13 @@ import com.coder4.homs.demo.server.mybatis.dataobject.UserDO;
 import com.coder4.homs.demo.server.web.vo.UserVO;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @author coder4
  */
 @Data
-public class User {
+public class User implements Serializable {
 
     private long id;
 

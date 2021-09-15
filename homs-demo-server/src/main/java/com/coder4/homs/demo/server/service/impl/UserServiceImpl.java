@@ -76,8 +76,8 @@ public class UserServiceImpl extends BaseService implements UserService {
 
     @Override
     public Optional<User> getUserByIdV3(long id) {
-        return userJPARepository.findById(id).map(UserEntity::toUser);
-        //return userJPARepository.findByIdFast(id).map(UserEntity::toUser);
+        //return userJPARepository.findById(id).map(UserEntity::toUser);
+        return userJPARepository.findByIdFast(id).map(UserEntity::toUser);
     }
 
     @Override

@@ -46,7 +46,7 @@ public class HomsDemoClient {
         stub = HomsDemoGrpc.newStub(channel);
     }
 
-    public Optional<Integer> add2(int val1, int val2) {
+    public Optional<Integer> add(int val1, int val2) {
         AddRequest request = AddRequest.newBuilder().setVal1(val1).setVal2(val2).build();
         AddResponse response;
         try {

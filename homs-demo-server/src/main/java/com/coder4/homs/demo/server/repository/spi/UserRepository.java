@@ -7,6 +7,7 @@
 package com.coder4.homs.demo.server.repository.spi;
 
 import com.coder4.homs.demo.server.model.User;
+import org.springframework.cache.annotation.Cacheable;
 
 import java.util.Optional;
 
@@ -17,6 +18,7 @@ public interface UserRepository {
 
     Optional<Long> create(User user);
 
+    @Cacheable(value = "cache")
     Optional<User> getUser(long id);
 
     Optional<User> getUserByName(String name);
