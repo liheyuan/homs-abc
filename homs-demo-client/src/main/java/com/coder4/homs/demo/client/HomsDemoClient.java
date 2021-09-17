@@ -121,7 +121,7 @@ public class HomsDemoClient {
 
         try {
             HomsDemoClient client = new HomsDemoClient(channel);
-            System.out.println(client.add2(1, 2));
+            System.out.println(client.add(1, 2));
             System.out.println(client.add2(Arrays.asList(1, 2, 3)));
         } catch (Exception e) {
             LOG.error("rpc call excepiton", e);
