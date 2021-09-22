@@ -11,6 +11,10 @@ import com.coder4.homs.demo.server.service.spi.UserService;
 import com.coder4.homs.demo.server.web.logic.spi.UserLogic;
 import com.coder4.homs.demo.server.web.vo.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.redis.connection.RedisConnection;
+import org.springframework.data.redis.connection.RedisConnectionFactory;
+import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
@@ -29,6 +33,9 @@ public class UserLogicImpl implements UserLogic {
     @Autowired
     private RedisTemplate redisTemplate;
 
+    @Autowired
+    private LettuceConnectionFactory leconnFactory;
+
     @Override
     public long createUser(UserVO user) {
         return userService.create(user.toUser()).orElse(-1L);
@@ -36,7 +43,11 @@ public class UserLogicImpl implements UserLogic {
 
     @Override
     public UserVO getUserById(long id) {
-        redisTemplate.boundValueOps("key").set("value");
+        // redisTemplate.boundValueOps("key").set("value");
+
+//        try (RedisConnection conn = leconnFactory.getConnection()) {
+//            conn.set("hehe".getBytes(), "haha".getBytes());
+//        }
         return userService.getUserById(id).map(User::toUserVO)
                 .orElseThrow(() -> new ResponseStatusException(NOT_FOUND));
     }
