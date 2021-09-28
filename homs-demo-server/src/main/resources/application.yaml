@@ -46,3 +46,6 @@ spring:
       pool:
         max-active: 50
         min-idle: 5
+
+# nacos
+nacos.server: 127.0.0.1:8848

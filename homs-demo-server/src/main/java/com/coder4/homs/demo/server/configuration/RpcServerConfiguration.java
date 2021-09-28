@@ -6,7 +6,9 @@
  */
 package com.coder4.homs.demo.server.configuration;
 
+import com.alibaba.nacos.api.exception.NacosException;
 import com.coder4.homs.demo.server.HomsRpcServer;
+import com.coder4.homs.demo.server.service.spi.NacosService;
 import io.grpc.BindableService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,6 +19,8 @@ import org.springframework.context.annotation.Configuration;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import java.io.IOException;
+
+import static com.coder4.homs.demo.constant.HomsDemoConstant.SERVICE_NAME;
 
 /**
  * @author coder4
@@ -32,23 +36,28 @@ public class RpcServerConfiguration {
     @Autowired
     private HomsRpcServer server;
 
+    @Autowired
+    private NacosService nacosService;
+
     @Bean
     public HomsRpcServer createRpcServer() {
         return new HomsRpcServer(bindableService, 5000);
     }
 
     @PostConstruct
-    public void postConstruct() throws IOException {
+    public void postConstruct() throws IOException, NacosException {
         server.start();
+        nacosService.registerRPC(SERVICE_NAME);
     }
 
     @PreDestroy
-    public void preDestory() {
+    public void preDestory() throws NacosException {
         try {
             server.stop();
         } catch (InterruptedException e) {
             LOG.info("stop gRPC server exception", e);
         } finally {
+            nacosService.deregisterRPC(SERVICE_NAME);
             LOG.info("stop gRPC server done");
         }
     }
