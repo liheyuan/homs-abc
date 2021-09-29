@@ -11,7 +11,6 @@ import com.coder4.homs.demo.HomsDemoGrpc;
 import com.coder4.homs.demo.HomsDemoProto.AddRequest;
 import com.coder4.homs.demo.HomsDemoProto.AddResponse;
 import com.coder4.homs.demo.HomsDemoProto.AddSingleRequest;
-import io.grpc.Channel;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.StatusRuntimeException;
@@ -30,20 +29,37 @@ import java.util.concurrent.atomic.AtomicLong;
 /**
  * @author coder4
  */
-public class HomsDemoClient {
+public class HomsDemoGrpcClient implements MyGrpcClient {
 
-    private Logger LOG = LoggerFactory.getLogger(HomsDemoClient.class);
+    private Logger LOG = LoggerFactory.getLogger(HomsDemoGrpcClient.class);
 
-    private final HomsDemoGrpc.HomsDemoBlockingStub blockingStub;
+    private ManagedChannel channel;
 
-    private final HomsDemoGrpc.HomsDemoStub stub;
+    private HomsDemoGrpc.HomsDemoBlockingStub blockingStub;
+
+    private HomsDemoGrpc.HomsDemoStub stub;
 
     /**
      * Construct client for accessing HelloWorld server using the existing channel.
      */
-    public HomsDemoClient(Channel channel) {
+    public HomsDemoGrpcClient() {
+
+    }
+
+    @Override
+    public void setChannel(ManagedChannel channel) {
+        this.channel = channel;
+    }
+
+    @Override
+    public void init() {
         blockingStub = HomsDemoGrpc.newBlockingStub(channel);
         stub = HomsDemoGrpc.newStub(channel);
+    }
+
+    @Override
+    public void shutdownNow() throws InterruptedException {
+        channel.shutdownNow().awaitTermination(5, TimeUnit.SECONDS);
     }
 
     public Optional<Integer> add(int val1, int val2) {
@@ -105,7 +121,7 @@ public class HomsDemoClient {
     // Test
     public static void main(String[] args) throws InterruptedException {
 
-        Logger LOG = LoggerFactory.getLogger(HomsDemoClient.class);
+        Logger LOG = LoggerFactory.getLogger(HomsDemoGrpcClient.class);
 
         String target = "127.0.0.1:5000";
         ManagedChannel channel = null;
@@ -120,7 +136,9 @@ public class HomsDemoClient {
         }
 
         try {
-            HomsDemoClient client = new HomsDemoClient(channel);
+            HomsDemoGrpcClient client = new HomsDemoGrpcClient();
+            client.setChannel(channel);
+            client.init();
             System.out.println(client.add(1, 2));
             System.out.println(client.add2(Arrays.asList(1, 2, 3)));
         } catch (Exception e) {
