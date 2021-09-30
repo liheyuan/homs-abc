@@ -10,17 +10,16 @@ import com.alibaba.nacos.api.naming.NamingFactory;
 import com.alibaba.nacos.api.naming.NamingService;
 import com.alibaba.nacos.api.naming.listener.NamingEvent;
 import com.alibaba.nacos.api.naming.pojo.Instance;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * @author coder4
  */
-public class NacosGrpcClientManager<T extends MyGrpcClient> extends AbstractGrpcClientManager<T> {
+public class NacosGrpcClientManager<T extends HSGrpcClient> extends AbstractGrpcClientManager<T> {
 
     protected String serviceName;
 
@@ -48,37 +47,30 @@ public class NacosGrpcClientManager<T extends MyGrpcClient> extends AbstractGrpc
     }
 
     private void rebuildClientPools(List<Instance> instanceList) {
-        ArrayList<MyGrpcClient> list = new ArrayList<>();
+        ArrayList<HSGrpcClient> list = new ArrayList<>();
         for (Instance instance : instanceList) {
-            MyGrpcClient client = null;
-            try {
-                client = kind.newInstance();
-                client.setChannel(buildManagedChannel(instance.getIp(), instance.getPort()));
-                client.init();
-                list.add(client);
-            } catch (Exception e) {
-                LOG.error("build MyGrpcClient exception, instance = " + instance.toString(), e);
-            }
+            buildHsGrpcClient(instance.getIp(), instance.getPort()).ifPresent(c -> list.add(c));
         }
         CopyOnWriteArrayList<T> oldClientPools = clientPools;
         clientPools = new CopyOnWriteArrayList(list);
         // destory old ones
         oldClientPools.forEach(c -> {
             try {
-                c.shutdownNow();
+                c.close();
             } catch (InterruptedException e) {
                 LOG.error("MyGrpcClient shutdown exception", e);
             }
         });
     }
 
-//    public static void main(String[] args) throws Exception {
-//        NacosGrpcClientManager<HomsDemoClient> manager =
-//                new NacosGrpcClientManager<>(HomsDemoClient.class, "127.0.0.1:8848", "homs-demo");
-//        manager.init();
-//        manager.getClient().ifPresent(c -> System.out.println(c.add(1, 2)));
-//        Thread.sleep(10000);
-//        manager.shutdown();
-//    }
+    // Test
+    public static void main(String[] args) throws Exception {
+        NacosGrpcClientManager<HomsDemoGrpcClient> manager =
+                new NacosGrpcClientManager<>(HomsDemoGrpcClient.class, "127.0.0.1:8848", "homs-demo");
+        manager.init();
+        manager.getClient().ifPresent(c -> System.out.println(c.add(1, 2)));
+        Thread.sleep(10000);
+        manager.shutdown();
+    }
 
 }

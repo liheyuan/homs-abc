@@ -15,7 +15,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 /**
  * @author coder4
  */
-public class SimpleGrpcClientManager<T extends MyGrpcClient> extends AbstractGrpcClientManager<T> {
+public class SimpleGrpcClientManager<T extends HSGrpcClient> extends AbstractGrpcClientManager<T> {
 
     protected Logger LOG = LoggerFactory.getLogger(SimpleGrpcClientManager.class);
 
@@ -29,11 +29,10 @@ public class SimpleGrpcClientManager<T extends MyGrpcClient> extends AbstractGrp
         this.port = port;
     }
 
-    public void init() throws Exception {
+    public void init() {
         // init one client only
-        MyGrpcClient client = kind.newInstance();
-        client.setChannel(buildManagedChannel(ip, port));
-        client.init();
+        HSGrpcClient client = buildHsGrpcClient(ip, port)
+                .orElseThrow(() -> new RuntimeException("build HsGrpcClient fail"));
         clientPools = new CopyOnWriteArrayList(Arrays.asList(client));
     }
 

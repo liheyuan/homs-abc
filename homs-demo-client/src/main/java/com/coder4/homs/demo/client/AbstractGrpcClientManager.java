@@ -6,9 +6,6 @@
  */
 package com.coder4.homs.demo.client;
 
-import io.grpc.Channel;
-import io.grpc.ManagedChannel;
-import io.grpc.ManagedChannelBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,7 +16,7 @@ import java.util.concurrent.ThreadLocalRandom;
 /**
  * @author coder4
  */
-public abstract class AbstractGrpcClientManager<T extends MyGrpcClient> {
+public abstract class AbstractGrpcClientManager<T extends HSGrpcClient> {
 
     protected Logger LOG = LoggerFactory.getLogger(getClass());
 
@@ -51,15 +48,21 @@ public abstract class AbstractGrpcClientManager<T extends MyGrpcClient> {
         });
     }
 
-    protected void shutdown(MyGrpcClient client) throws InterruptedException {
-        client.shutdownNow();
+    protected void shutdown(HSGrpcClient client) throws InterruptedException {
+        client.close();
     }
 
-    protected ManagedChannel buildManagedChannel(String ip, int port) throws Exception {
-        return ManagedChannelBuilder
-                .forTarget(ip + ":" + port)
-                .usePlaintext()
-                .build();
+    protected Optional<HSGrpcClient> buildHsGrpcClient(String ip, int port) {
+        try {
+            Class[] cArg = {String.class, int.class};
+            HSGrpcClient client = kind.getDeclaredConstructor(cArg)
+                    .newInstance(ip, port);
+            client.init();
+            return Optional.ofNullable(client);
+        } catch (Exception e) {
+            LOG.error("build MyGrpcClient exception, ip = "+ ip + " port = "+ port, e);
+            return Optional.empty();
+        }
     }
 
 }
