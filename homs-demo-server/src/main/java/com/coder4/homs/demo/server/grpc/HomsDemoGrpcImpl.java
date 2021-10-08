@@ -10,6 +10,7 @@ import com.coder4.homs.demo.HomsDemoGrpc.HomsDemoImplBase;
 import com.coder4.homs.demo.HomsDemoProto.AddRequest;
 import com.coder4.homs.demo.HomsDemoProto.AddResponse;
 import com.coder4.homs.demo.HomsDemoProto.AddSingleRequest;
+import com.coder4.homs.demo.server.annotation.HSConfig;
 import io.grpc.stub.StreamObserver;
 
 /**
