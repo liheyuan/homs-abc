@@ -13,7 +13,6 @@ import com.alibaba.nacos.api.naming.pojo.Instance;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**

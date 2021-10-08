@@ -51,7 +51,9 @@ public class HsConfigFieldProcessor implements BeanPostProcessor, Ordered {
 
     private void processField(Object bean, Field field) {
         HSConfig valueAnnotation = field.getDeclaredAnnotation(HSConfig.class);
+        // 优先注解，其次本地代码
         String key = StringUtils.defaultIfEmpty(valueAnnotation.name(), field.getName());
+        String serviceName = StringUtils.defaultIfEmpty(valueAnnotation.serviceName(), this.serviceName);
         Optional<String> valueOp = nacosConfigService.getConfig(serviceName, key);
         try {
             if (!valueOp.isPresent()) {
