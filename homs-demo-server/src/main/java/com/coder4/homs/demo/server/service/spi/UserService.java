@@ -10,6 +10,7 @@ import com.coder4.homs.demo.server.model.User;
 import com.coder4.homs.demo.server.web.vo.UserVO;
 
 import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
 
 /**
  * @author coder4
@@ -20,7 +21,7 @@ public interface UserService {
 
     Optional<User> getUserById(long id);
 
-    Optional<User> getUserByName(String name);
+    CompletableFuture<Optional<User>> getUserByNameWithCompletableFuture(String name);
 
     Optional<Long> createV2(User user);
 

@@ -7,7 +7,7 @@
 package com.coder4.homs.demo.server.processor;
 
 import com.alibaba.nacos.common.utils.StringUtils;
-import com.coder4.homs.demo.server.HsReflectionUtils;
+import com.coder4.homs.demo.server.utils.HsReflectionUtils;
 import com.coder4.homs.demo.server.annotation.HSConfig;
 import com.coder4.homs.demo.server.service.spi.NacosConfigService;
 import org.slf4j.Logger;

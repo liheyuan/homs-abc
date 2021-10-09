@@ -9,7 +9,6 @@ package com.coder4.homs.demo.server.config;
 import com.coder4.homs.demo.server.annotation.HSConfig;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
 import java.util.Map;
 
 /**
@@ -23,11 +22,5 @@ public class HomsDemoConfig {
 
     @HSConfig(name = "mapConfig")
     private Map<String, String> map;
-
-    @PostConstruct
-    public void postConstruct() {
-        System.out.println(num);
-        System.out.println(map);
-    }
 
 }

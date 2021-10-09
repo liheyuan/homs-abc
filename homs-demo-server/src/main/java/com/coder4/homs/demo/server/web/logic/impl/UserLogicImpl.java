@@ -7,9 +7,12 @@
 package com.coder4.homs.demo.server.web.logic.impl;
 
 import com.coder4.homs.demo.server.model.User;
+import com.coder4.homs.demo.server.service.impl.UserServiceImpl;
 import com.coder4.homs.demo.server.service.spi.UserService;
 import com.coder4.homs.demo.server.web.logic.spi.UserLogic;
 import com.coder4.homs.demo.server.web.vo.UserVO;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.redis.connection.RedisConnection;
@@ -19,6 +22,8 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.concurrent.ExecutionException;
+
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 /**
@@ -26,6 +31,8 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
  */
 @Service
 public class UserLogicImpl implements UserLogic {
+
+    private Logger LOG = LoggerFactory.getLogger(UserServiceImpl.class);
 
     @Autowired
     private UserService userService;
@@ -54,8 +61,13 @@ public class UserLogicImpl implements UserLogic {
 
     @Override
     public UserVO getUserByName(String name) {
-        return userService.getUserByName(name).map(User::toUserVO)
-                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND));
+        try {
+            return userService.getUserByNameWithCompletableFuture(name).get().map(User::toUserVO)
+                    .orElseThrow(() -> new ResponseStatusException(NOT_FOUND));
+        } catch (Exception e) {
+            LOG.error("getUserByNameWithCompletableFuture exception", e);
+            throw new ResponseStatusException(NOT_FOUND);
+        }
     }
 
     @Override

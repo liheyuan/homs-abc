@@ -4,7 +4,7 @@
  * Copyright 2021 coder4.com. All rights reserved.
  * CODER4.COM PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
-package com.coder4.homs.demo.server;
+package com.coder4.homs.demo.server.utils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

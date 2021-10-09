@@ -49,3 +49,29 @@ spring:
 
 # nacos
 nacos.server: 127.0.0.1:8848
+
+# resilience4j
+resilience4j:
+  circuitbreaker:
+    instances:
+      getUserById:
+        registerHealthIndicator: true
+        slidingWindowSize: 100
+        failureRateThreshold: 50
+  thread-pool-bulkhead:
+    instances:
+      getUserByName:
+        maxThreadPoolSize: 100
+        coreThreadPoolSize: 50
+        queueCapacity: 200
+  timelimiter:
+    instances:
+      getUserByName:
+        timeoutDuration: 1s
+        cancelRunningFuture: true
+  rateLimiter:
+    instances:
+      getUserByIdV2:
+        limitForPeriod: 1
+        limitRefreshPeriod: 500ms
+        timeoutDuration: 0
