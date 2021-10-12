@@ -75,3 +75,6 @@ resilience4j:
         limitForPeriod: 1
         limitRefreshPeriod: 500ms
         timeoutDuration: 0
+
+# rocketmq
+rocketmq.namesrv: 127.0.0.1:9876

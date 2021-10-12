@@ -24,7 +24,7 @@ public class NacosServiceImpl implements NacosService {
     @Value("${nacos.server}")
     private String nacosServer;
 
-    protected NamingService namingService;
+    private NamingService namingService;
 
     @PostConstruct
     public void postConstruct() throws NacosException {
