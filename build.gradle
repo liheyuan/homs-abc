@@ -14,4 +14,30 @@ subprojects {
   version = '0.0.1-SNAPSHOT'
   sourceCompatibility = '1.8'
 
+  apply plugin: 'java'
+  apply plugin: 'maven-publish'
+
+  publishing {
+    publications {
+      "$project.name"(MavenPublication) {
+        groupId project.group
+        artifactId project.name
+        version project.version
+        from components.java
+      }
+    }
+
+    repositories {
+      maven {
+        credentials {
+          username mavenUsername 
+          password mavenPassword
+        }
+        url = version.endsWith('SNAPSHOT') ? mavenSnapshotRepo : mavenReleaseRepo
+      }
+    }
+  }
+
 }
+
+
